@@ -1,0 +1,23 @@
+{
+	"name": "maximal/php-webp-thumbnailer",
+	"description": "PHP (over Imagine) helper for creating and caching WebP thumbnails in real time",
+	"keywords": ["webp", "thumbnail", "image", "imagine", "helper"],
+	"type": "library",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "maximal",
+			"email": "almaximal@ya.ru",
+			"homepage": "https://github.com/maximal"
+		}
+	],
+	"minimum-stability": "dev",
+	"require": {
+		"imagine/imagine": "~0.6.0 | ~0.7.1"
+	},
+	"autoload": {
+		"psr-4": {
+			"maximal\\thumbnail\\": ""
+		}
+	}
+}
