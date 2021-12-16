@@ -93,6 +93,13 @@ class WebpThumbnailer
 	 */
 	public static function picture($path, $width, $height, $inset = true, $options = [])
 	{
+		if (!is_file($path)) {
+			return sprintf(
+				'<img src="#" alt="No File: %s" />',
+				htmlspecialchars($path)
+			);
+		}
+
 		$mode = $inset ? ManipulatorInterface::THUMBNAIL_INSET : ManipulatorInterface::THUMBNAIL_OUTBOUND;
 
 		$extension = pathinfo($path, PATHINFO_EXTENSION);
